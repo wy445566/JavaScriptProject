@@ -1,0 +1,39 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=1200, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            .box{
+                background-color: chartreuse;
+                width: 100px;
+            }
+        </style>
+    </head>
+    <body>
+        <ul id="list">
+            <li>Java</li>
+            <li>Python</li>
+            <li>C++</li>
+            <li>JavaScript</li>
+        </ul>
+        <input type="text" id="txtCourse">
+        <button id="btnAdd">+</button>
+        <button id="btnDel">-</button>
+    </body>
+    <script>
+        const oList = document.querySelector("#list");
+
+        oList.addEventListener('mouseover',(event) =>{
+            if(event.target != event.currentTarget){
+              event.target.classList.add('box');    
+            }
+          
+        })
+        oList.addEventListener('mouseover',(event) =>{
+            event.target.classList.remove('box');
+        })
+
+    </script>
+    </html>

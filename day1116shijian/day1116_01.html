@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1200, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li>Java</li>
+        <li>JavaScript</li>
+        <li>Python</li>
+    </ul>
+    <script>
+        const List = document.querySelector('ul')
+        const oE = document.createElement('li')
+        //oE.append("Swift")
+        oE.textContent = 'swift'
+        // oList.append(open)
+        // oList.prepend(oE)
+        oList.lastELementChild.before(oE)//最后一个字节点的前面
+        // oList.firstElementChild.after(oE)//插在第一个子节点之后
+        oList.firstElementChild.nextElementSibling('li')//
+          </script>
+</body>
+</html>

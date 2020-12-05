@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1200, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+#box{
+    width: 300px;
+    height: 300px;
+    border: red 2px solid;
+    color: #000;
+
+}
+
+
+    </style>
+</head>
+<body>
+    <div id="box">box</div>
+    <script>
+   
+        window.addEventListener('click',()=>{
+            console.log('==> window 捕获阶段')
+        },true)
+        document.documentElement.addEventListener('click',()=>{
+            console.log('==> document 捕获阶段')
+        },true)
+
+        document.body.addEventListener('click',()=>{
+            console.log('==> body 捕获阶段')
+        },true)
+
+        oBox.addEventListener('click',()=>{
+            console.log('==> document 捕获阶段')
+        },true)
+
+        window.addEventListener('click',()=>{
+            console.log('==> window 冒泡阶段')
+        },true)
+        document.documentElement.addEventListener('click',()=>{
+            console.log('==> document 冒泡阶段')
+        },true)
+
+        document.body.addEventListener('click',()=>{
+            console.log('==> body 冒泡阶段')
+        },true)
+
+        oBox.addEventListener('click',()=>{
+            console.log('==> document 冒泡阶段')
+        },true)
+
+
+
+    </script>
+</body>
+</html>

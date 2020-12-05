@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>lianxi1</title>
+    <style>
+        body, html ,ul{
+            padding: 0;
+            margin: 0;
+        }
+        ul{
+            width: 200px;
+            list-style: none;
+            /* border: 1px solid #333; */
+            
+        }
+        .color{
+            width: 200px;
+            border: 1px solid #333;
+            margin: 0 auto;
+        }
+        .color>ul>li{
+            border-bottom: 1px solid #333;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="color">
+        <ul>
+            <li class="gcolor">red</li>
+            <li class="gcolor">blue</li>
+            <li class="gcolor">green</li>
+            <li class="gcolor">yellow</li>
+            <li class="gcolor">organe</li>
+            <li class="gcolor">pink</li>
+            <li class="gcolor">purple</li>
+        </ul>
+    </div>
+</body>
+</html>
+<script>
+    var ul = document.getElementById('event');
+    var color = document.getElementsByClassName('gcolor');
+    var vcolor = ['red', 'blue' ,'green','yellow','orange','pink','purple']
+    
+    for(var i = 0 ;i <color.length;i++){
+        //属性绑定
+        color[i].index = i;
+        color[i].a = true;
+        //事件的绑定
+        color[i].onclick = function(){
+            // console.log(this.index)
+            //this 是指向事件的调用者(color[i])
+            if(this.a){
+            //设置背景颜色
+            color[this.index].style.backgroundColor = vcolor[this.index];
+            this.a = false;
+            }
+            else{
+                color[this.index].style.backgroundColor = "#fff";
+                this.a = true;
+            }
+        }
+    }
+</script>
+ 
